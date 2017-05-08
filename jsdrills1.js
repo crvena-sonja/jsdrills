@@ -1,7 +1,11 @@
+function yearOfBirth(age) {
+	return new Date().getFullYear() - age;
+}
+
 function whoAmI(name, age){
-	let yearOfBirth = new Date().getFullYear() - age;
+	let yOB = yearOfBirth(age);
 	console.log(`My name is ${name} and I'm ${age} years old.`);
-	console.log(`I was born in ${yearOfBirth}`);
+	console.log(`I was born in ${yOB}.`);
 }
 
 whoAmI("Sonja", 30);
