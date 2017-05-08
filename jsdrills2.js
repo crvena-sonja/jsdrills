@@ -21,4 +21,22 @@ function beyond(num){
     }
 }
 
-beyond(Infinity);
+//beyond(Infinity);
+
+function decode(crypto){
+    switch (crypto.charAt(0)) {
+        case 'a': return crypto.charAt(1);
+        case 'b': return crypto.charAt(2);
+        case 'c': return crypto.charAt(3); 
+        case 'd': return crypto.charAt(4); 
+        default: return " "; 
+    }
+}
+
+function decodeSentence(sentence) {
+    sentence = sentence.split(" ");
+    
+    return sentence.map(decode).join('');
+}
+
+console.log(decodeSentence("craft block argon meter bells brown croon droop"));
